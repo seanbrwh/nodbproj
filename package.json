@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "geocodio": "^2.0.0",
     "leaflet": "^1.3.1",
+    "moment": "^2.22.2",
+    "normalize-date": "0.0.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-iframe": "^1.2.0",
+    "react-leaflet": "^2.0.0",
+    "react-scripts": "1.1.4",
+    "react-simple-maps": "^0.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,6 +24,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "main":"./server/server.js",
-  "proxy":"http://localhost:3005"
+  "main": "./server/server.js",
+  "proxy": "http://localhost:3040"
 }

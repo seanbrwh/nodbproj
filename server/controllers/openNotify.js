@@ -10,12 +10,11 @@ module.exports = {
             let {latitude:lat,longitude:lon} = pos;
             time = toDate(time * 1000)
             location.push(
-            `ID:${id} 
-            Messaage:${msg} 
-            Time:${time} 
-            Position:  
-            Lat:${lat}  
-            lon: ${lon}`)
+            [`ID:${id}`, 
+            `Messaage:${msg}`, 
+            `Time:${time}`, 
+            `Lat:${lat}`,  
+            `lon: ${lon}`],)
             id++
             res.status(200).send(location)
         })

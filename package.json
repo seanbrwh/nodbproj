@@ -14,6 +14,7 @@
     "normalize-date": "0.0.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-geocode": "0.0.9",
     "react-iframe": "^1.2.0",
     "react-leaflet": "^2.0.0",
     "react-scripts": "1.1.4",

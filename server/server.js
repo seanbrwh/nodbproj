@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const oN = require('./controllers/openNotify')
+const oN = require('./controllers/openNotify');
 let {SERVER_PORT} = process.env;
 
 
@@ -13,4 +13,6 @@ app.listen(SERVER_PORT, () =>{
 })
 
 app.post('/api/open-notify',oN.create);
-app.get('/api/open-notify',oN.read)
+app.get('/api/open-notify',oN.read);
+
+

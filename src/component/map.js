@@ -28,7 +28,7 @@ class Map extends Component {
   render() {
       
     return (
-      <div style={{ height: '50vh', width: '50vw', margin: '0 auto' }}>
+      <div style={{ height: '50vh', width: '50vw', margin: '0 auto' }} >
         {/* <button onClick={()=> this.showIssLoc()}>Show ISS</button> */}
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyB3fhHmjrJ90lDmCuGiasHtpOPEVySHYjw'}}
@@ -38,7 +38,6 @@ class Map extends Component {
         <Marker
           lat={this.props.latitude}
           lng={this.props.longitude}
-          center={[this.state.center]}
         />
         </GoogleMapReact>
       </div>

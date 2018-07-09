@@ -49,7 +49,7 @@ class CommentWindow extends Component{
         <div>
             <div>
             {
-                this.state.message.forEach(e=> (
+                this.state.message.map(e=> (
                 <Post style={{width:'80vw', height:'20vh',background:'red'}} key={e.id} id={e.id} text={JSON.stringify(e.text)} edit={this.editComment} delete={this.deleteComment}/>
                 ))
                 

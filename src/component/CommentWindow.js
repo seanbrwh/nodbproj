@@ -56,7 +56,7 @@ class CommentWindow extends Component{
                 placeholder='Enter Comment Here' 
                 />
             </div>
-            <div style={{width:'80vw', height:'80vh',background:'rgb(226, 237, 255)', margin: '0 auto', marginTop:'20px', marginBottom:'60px',boxShadow:'5px 10px rgba(150, 145, 145,.5)'}}>
+            <div style={{width:'80vw', height:'80vh',background:'rgb(226, 237, 255)', margin: '0 auto', marginTop:'20px', marginBottom:'60px',boxShadow:'5px 10px rgba(150, 145, 145,.5)',paddingTop:'10px'}}>
             {
                 this.state.message.map(e=> (
                 <Post  key={e.id} id={e.id} text={e.text} edit={this.editComment} remove={this.deleteComment}/>

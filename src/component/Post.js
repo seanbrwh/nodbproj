@@ -28,15 +28,19 @@ class Post extends Component{
         console.log(id,text)
         return(
             <div>
-                {
+               
+               <div style={{background:'rgba(41, 97, 188,.4)', width:'80%', height:'100px', margin:'0 auto',marginBottom:'20px',paddingTop:'20px', borderRadius:'90px',boxShadow:'5px 10px rgba(150, 145, 145,.5)'}}>{
                     editting
                     ?
-                    <input type="text" value={this.state.text} onChange={this.updateInput} onKeyPress={this.edit}/>
+                    <input style={{width:'60%',borderRadius:'90px'}} type="text" value={this.state.text} onChange={this.updateInput} onKeyPress={this.edit}/>
                     :
                     <span style={{margin:'5px'}}>{text}</span>
                 }
-                <span style={{margin: '5px'}} onClick={()=> this.setState({editting: !this.state.editting, text})}>Edit</span>
-                <span style={{margin:'5px'}} onClick={()=> remove(id)}>Delete</span>
+                <br/>
+                <span style={{margin: '5px',marginLeft:'550px'}} onClick={()=> this.setState({editting: !this.state.editting, text})}>Edit</span>
+                <br/> <span style={{margin:'5px',marginLeft:'550px'}} onClick={()=> remove(id)}>Delete</span>
+                </div>
+                
             </div>
         )
     }

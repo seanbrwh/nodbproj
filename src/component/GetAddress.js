@@ -32,9 +32,9 @@ class GetAddress extends Component {
     resAddress(){
         Geocode.fromLatLng(this.state.userLat, this.state.userLon).then(
         response => {
-            const add = response.results[0].formatted_address;
+            const address = response.results[0].formatted_address;
             this.setState({
-                address:add
+                address:address
             })
             },
             error => {
@@ -59,7 +59,7 @@ class GetAddress extends Component {
     render(){
         return(
             <div style={{boackground:'#000'}}>
-                <div style={{marginTop:'20px'}}>
+                <div style={{marginTop:'60px'}}>
                     <input onChange={(e) => this.updateLat(e.target.value)} type="text" placeholder='Latitude'/> <input onChange={(e) => this.updateLon(e.target.value)} type="text" placeholder='Longitude'/> 
                     <button style={{marginLeft:'5px'}} onClick={() => this.resAddress()}>Get Address</button>
                     <div>{this.state.address}</div>

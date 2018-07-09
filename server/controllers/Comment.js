@@ -12,16 +12,21 @@ module.exports = {
         res.status(200).send(messages)
     },
     update:(req,res) =>{
+        console.log(req.body);
         const {text} = req.body;
         const {id} = req.params;
-        let new_arr = messages.map((e) => {
+        messages = messages.map((e) => {
             if(e.id === parseInt(id)){
-                e.id = id
-                e.text = text
+                e = {
+                    text:text || e.text,
+                    id:parseInt(id) 
+                    
+                }
                     
             }
+            return e
         })
-        messages.push(new_arr)
+        console.log(messages);
         res.status(200).send(messages)
         
         

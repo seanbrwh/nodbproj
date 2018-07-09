@@ -33,7 +33,8 @@ class CommentWindow extends Component{
     }
     editComment(id,text){
         console.log(`editMessage: ${id},${text}`)
-        axios.put(`/api/comments/${id}`).then(res =>{
+        axios.put(`/api/comments/${id}`,{text}).then(res =>{
+            console.log(`This is res.data: ${res.data}`);
             this.setState({message:res.data})
         })
     }
@@ -58,7 +59,7 @@ class CommentWindow extends Component{
             <div style={{width:'80vw', height:'80vh',background:'rgb(226, 237, 255)', margin: '0 auto', marginTop:'20px', marginBottom:'60px',boxShadow:'5px 10px rgba(150, 145, 145,.5)'}}>
             {
                 this.state.message.map(e=> (
-                <Post  key={e.id} id={e.id} text={JSON.stringify(e.text)} edit={this.editComment} remove={this.deleteComment}/>
+                <Post  key={e.id} id={e.id} text={e.text} edit={this.editComment} remove={this.deleteComment}/>
                 ))
                 
             }

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import toDate from 'normalize-date';
-import Map from './Map';
+import Map from './map';
 import GetAddress from './GetAddress'
 import Geocode from 'react-geocode';
-import CommentWin from './Comments/CommentWin'
+
 
 class IssInfo extends Component{
     constructor(){
@@ -60,7 +60,6 @@ class IssInfo extends Component{
                 </Map>
                 {/* {this.state.address} */}
                 <GetAddress/>
-                <CommentWin/>
             </div>
 
         )

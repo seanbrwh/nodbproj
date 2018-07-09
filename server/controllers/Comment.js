@@ -1,9 +1,10 @@
-const messages = [];
+let messages = [];
 let id = 0;
 module.exports = {
     create : (req,res) =>{
         const {text} = req.body;
-        messages.push({id,text});
+        JSON.stringify(text)
+        messages.push({text,id});
         id++;
         res.status(200).send(messages)
     },

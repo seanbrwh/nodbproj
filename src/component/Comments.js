@@ -5,7 +5,7 @@ class Comments extends Component{
     render(){
         return(
             <div>
-                <CommentWindow/>
+                <CommentWindow stlye={{margin:'40px'}}/>
             </div>
         )
     }

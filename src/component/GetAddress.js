@@ -58,15 +58,19 @@ class GetAddress extends Component {
     
     render(){
         return(
-            <div>
-                <input onChange={(e) => this.updateLat(e.target.value)} type="text" placeholder='Latitude'/> <input onChange={(e) => this.updateLon(e.target.value)} type="text" placeholder='Longitude'/> 
-                <button onClick={() => this.resAddress()}>Get Address</button>
-                <div>{this.state.address}</div>
+            <div style={{boackground:'#000'}}>
+                <div style={{marginTop:'20px'}}>
+                    <input onChange={(e) => this.updateLat(e.target.value)} type="text" placeholder='Latitude'/> <input onChange={(e) => this.updateLon(e.target.value)} type="text" placeholder='Longitude'/> 
+                    <button style={{marginLeft:'5px'}} onClick={() => this.resAddress()}>Get Address</button>
+                    <div>{this.state.address}</div>
+                </div>
                 
                 <br/>
-                <input onChange={(e) => this.updateAddress(e.target.value)} type="text" placeholder='Address'/>
-                <button onClick={()=> this.resLatLon()}>Get Lat Lon</button>
-                <div>{this.state.latLon}</div>
+                <div>
+                    <input onChange={(e) => this.updateAddress(e.target.value)} type="text" placeholder='Address'/>
+                    <button style={{marginLeft:'5px'}} onClick={()=> this.resLatLon()}>Get Lat Lon</button>
+                    <div>{this.state.latLon}</div>
+                </div>
                 
             </div>
         )

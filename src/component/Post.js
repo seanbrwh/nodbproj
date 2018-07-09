@@ -7,6 +7,8 @@ class Post extends Component{
             editting: false,
             text:this.props.text
         }
+        this.updateInput = this.updateInput.bind(this)
+        this.edit = this.edit.bind(this)
     }
     updateInput(event){
         this.setState({text:event.target.value})
@@ -30,10 +32,10 @@ class Post extends Component{
                     ?
                     <input type="text" value={this.state.text} onChange={this.updateInput} onKeyPress={this.edit}/>
                     :
-                    <span>{text}</span>
+                    <span style={{margin:'5px'}}>{text}</span>
                 }
-                <span onClick={()=> this.setState({editting: !this.state.editting, text})}></span>
-                <span onClick={()=> remove(id)}>Delete</span>
+                <span style={{margin: '5px'}} onClick={()=> this.setState({editting: !this.state.editting, text})}>Edit</span>
+                <span style={{margin:'5px'}} onClick={()=> remove(id)}>Delete</span>
             </div>
         )
     }

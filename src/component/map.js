@@ -8,8 +8,8 @@ class Map extends Component {
     super()
     this.state = { 
     center: {
-      lat: 59.95,
-      lng: 30.33
+      lat: 40.2262583,
+      lng: -111.6607527
     },
     zoom: 2,
     
@@ -36,8 +36,14 @@ class Map extends Component {
           defaultZoom={this.state.zoom}
         >
         <Marker
+         lat={40.2262583}
+         lng={-111.6607527}
+         text={'Dev M'}
+        />
+        <Marker
           lat={this.props.latitude}
           lng={this.props.longitude}
+          text={'ISS'}
         />
         </GoogleMapReact>
       </div>

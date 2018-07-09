@@ -51,8 +51,9 @@ class IssInfo extends Component{
     render(){
         return(
             <div>
-                <button onClick={() => this.getLocation()}  >Get ISS Location</button>
-                <br/>{this.state.location}
+                <button style={{margin:'10px', marginBottom:'20px'}} onClick={() => this.getLocation()}  >Get ISS Location</button>
+                <div style={{margin: '0 auto'}}>{this.state.location}</div>
+                <br/>
                 <Map
                 latitude={this.state.latitude}
                 longitude={this.state.longitude}
